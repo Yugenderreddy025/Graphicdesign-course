@@ -130,12 +130,57 @@ document
     }
   });
 
-function setErrorState(element, labelId) {
-  element.classList.add("error");
-  document.getElementById(labelId).classList.add("error-label");
+  function setErrorState(element, labelId) {
+    element.classList.add("error-input");
+    document.getElementById(labelId).classList.add("error-label");
 }
 
 function resetErrorState(element, labelId) {
-  element.classList.remove("error");
-  document.getElementById(labelId).classList.remove("error-label");
+    element.classList.remove("error-input");
+    document.getElementById(labelId).classList.remove("error-label");
 }
+
+document.getElementById("enrollmentForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission for now, we'll handle validation
+
+    // Reset error states
+    resetErrorState(document.getElementById("name"), "nameLabel");
+    resetErrorState(document.getElementById("mobile"), "mobileLabel");
+    resetErrorState(document.getElementById("email"), "emailLabel");
+    resetErrorState(document.getElementById("message"), "messageLabel");
+
+    // Validate form fields
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let isValid = true;
+
+    // Check if fields are empty
+    if (name === "") {
+        setErrorState(document.getElementById("name"), "nameLabel");
+        isValid = false;
+    }
+    if (mobile === "") {
+        setErrorState(document.getElementById("mobile"), "mobileLabel");
+        isValid = false;
+    }
+    if (email === "") {
+        setErrorState(document.getElementById("email"), "emailLabel");
+        isValid = false;
+    }
+    if (message === "") {
+        setErrorState(document.getElementById("message"), "messageLabel");
+        isValid = false;
+    }
+
+    // If form is valid, proceed with submission
+    if (isValid) {
+        // You can submit the form here if needed
+        console.log("Form submitted!");
+        // Example: document.getElementById("enrollmentForm").submit();
+    } else {
+        // Form has errors, do not submit
+        console.log("Form has errors. Please fill in all required fields.");
+    }
+});

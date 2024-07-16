@@ -591,13 +591,13 @@ ul {
     cursor: pointer;
 }
 
-.error {
+.form .error-label {
+    color: red;
+}
+.form .error-input {
     border: 1px solid red;
 }
 
-.error-label {
-    color: red;
-}
 
 .section-9 {
     text-align: center;  
