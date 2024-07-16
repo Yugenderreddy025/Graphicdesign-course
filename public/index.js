@@ -33,18 +33,35 @@ setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
 
 // Initial display
 showTestimonial(currentIndex);
-document
-  .querySelector(".enroll, .enrolls")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener to all elements with class "enroll"
+  const enrollButtons = document.querySelectorAll(".enroll");
+  enrollButtons.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    const target = document.querySelector(".section-8");
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+      // Scroll to .section-8
+      const section8 = document.querySelector(".section-8");
+      if (section8) {
+        section8.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
   });
+});
+
+document.querySelector(" .enrolls").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Scroll to .section-8
+  const section8 = document.querySelector(".section-8");
+  if (section8) {
+    section8.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+});
 document.querySelector(".course").addEventListener("click", function (e) {
   e.preventDefault();
   const target = document.querySelector(".section-3");
