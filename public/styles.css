@@ -1,0 +1,817 @@
+:root {
+    --main-color: #FFFFFF;
+    --secondary-color: #A658A2;
+    --custom-gradient: linear-gradient(to right, #6b1ad3 0%, #ca7e7e 45%);
+    /* Define the variable correctly */
+    --hover-background: #FFFFFF;
+    --hover-text-color: #000000;
+    --danger-background-color: linear-gradient(to right, #D31A42 1%, #FFFFFF 63%, #FFFFFF 80%, #FFFFFF 100%);
+}
+.strike {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* border: none; */
+    text-decoration: none;
+}
+
+/*button*/
+.syllabus {
+    text-align: center;
+    /* Center text within the syllabus div */
+}
+
+.enroll {
+    background-color: #6b1ad3;
+    /* Example button styling */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    background-color: #090A0C;
+    color: var(--main-color);
+    font-family: "Poppins", sans-serif;
+    /* Apply the variable for the color */
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.offer {
+    width: 846px;
+    position: relative;
+    top: 0;
+}
+
+.offer.fixed {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-button i {
+    color: #d1303e;
+    /* Red color for the icon */
+    margin-right: 10px;
+}
+
+.contact-button:hover {
+    border-color: #d1303e;
+}
+
+.contact-button:focus {
+    outline: none;
+}
+
+.section-1 {
+    margin-top: 2rem;
+    /* text-align: center; */
+}
+
+.container-1 {
+    text-align: center;
+}
+
+.headline {
+    color: var(--main-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.caption {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 1rem;
+    flex-wrap: 900px;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.class-starts {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 1.5rem;
+}
+
+.class-starts .month {
+    background-color: var(--secondary-color);
+    padding: 4px 16px;
+    border-radius: 4px;
+
+}
+
+.class-starts .duration {
+    background-color: var(--secondary-color);
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.explore {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.explore .course {
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+.section-2 {
+    margin-top: 4.5rem;
+    text-align: center;
+}
+
+.program-highlights {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    /* gap: 0.5rem; */
+    margin-top: 2rem;
+}
+
+.col-1 {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    width: 273px;
+    height: 286px;
+}
+
+.col-1:hover {
+    background-image: var(--custom-gradient);
+
+}
+
+.col-1:hover::after {
+    color: var(--main-color);
+}
+.col-1:hover .caption-1 {
+    color: white; 
+}
+.col-1:nth-child(1):hover .pm-logo {
+    content: url('images/live-sessions-white.png'); /* Change to different image on hover */
+}
+.col-1:nth-child(2):hover .pm-logo {
+    content: url('images/real-projects-white.png'); /* Change to different image on hover */
+}
+.col-1:nth-child(3):hover .pm-logo {
+    content: url('images/doubt-white.png'); /* Change to different image on hover */
+}
+.col-1:nth-child(4):hover .pm-logo {
+    content: url('images/intern-white.png'); /* Change to different image on hover */
+}
+.caption-1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+}
+
+
+.col-1 .content {
+    padding-top: 4rem;
+}
+
+.enroll {
+    margin-top: 2rem;
+    background-image: var(--custom-gradient);
+    color: var(--main-color);
+    border-radius: 20px;
+    padding: 8px 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    border: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #090A0C;
+    color: var(--main-color);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: var(--hover-background);
+    color: var(--hover-text-color);
+}
+
+.week {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    padding: 5px 10px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    top: -0.5px;
+    left: -0.5px;
+    font-weight: 600;
+}
+
+.content-1 {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+.list {
+    margin-bottom: 5px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+
+}
+
+.list::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--main-color);
+}
+
+
+.mentor {
+    margin-top: 4rem;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    text-align: center;
+}
+
+.mentor .mentor-details {
+    width: 1100px;
+    height: auto;
+}
+
+.section-3 {
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.section-3 .tools {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tool-1 {
+    height: auto;
+    padding: 2rem 3rem;
+    border: 1px solid;
+    /* Fallback for older browsers */
+    border-radius: 20px;
+    border-image: var(--custom-gradient) 1;
+    /* Gradient border */
+}
+
+.section-4 {
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.section-5 {
+    margin-top: 18rem;
+    justify-content: center;
+
+}
+
+.section-5 .seats {
+    padding: 8px 8px;
+    background-image: var(--danger-background-color);
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 1rem;
+}
+
+.spot {
+    color: #090A0C;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.price-card {
+    border-radius: 20px;
+    border: 1px solid #6b1ad3;
+    border-image: 1px var(--custom-gradient);
+    margin-left: 25rem;
+    margin-right: 25rem;
+    padding: 23px 80px;
+    margin-top: 2rem;
+
+}
+
+.pricess {
+    text-align: center;
+    /* Center text within the div */
+    margin: 0 auto;
+    /* Center the div within its parent */
+    width: 100%;
+    /* Optional: Set a specific width if needed */
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.price span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price s {
+    font-size: 1.2em;
+    color: red;
+    /* Optional: Add color for strikethrough price */
+}
+
+.price h1 {
+    font-size: 2em;
+    color: var(--custom-gradient);
+    /* Optional: Add color for the new price */
+}
+
+.highlights ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;            /* Remove default padding */
+    margin: 0;             /* Remove default margin */
+}
+
+.highlights li {
+    display: flex;         /* Use flexbox for the list items */
+    align-items: center;   /* Center align items vertically */
+    margin-bottom: 10px;   /* Add some space between list items */
+}
+
+.highlights li img {
+    margin-right: 10px;    /* Space between the icon and the text */
+    width: 20px;           /* Set a fixed width for the icons */
+    height: 20px;          /* Set a fixed height for the icons */
+}
+.highlights{
+    margin-top: 2rem;
+    margin-left: 1rem ;
+}
+
+/*testimonals*/
+.testimonial-slider {
+    width: 60%;
+    max-width: 800px;
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 15rem;
+
+}
+
+.testimonial {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.upper-part {
+    display: flex;
+    align-items: center;
+}
+
+.upper-part img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.name-rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-rating h3 {
+    margin: 0;
+}
+
+.rating {
+    color: #ffcc00;
+}
+
+.review {
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    gap: 2rem;
+    margin-top: 3rem;
+
+}
+
+.section-6 .template {
+    width: 500px;
+    height: 400px;
+}
+
+/*form*/
+.section-8 {
+    display: flex;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 3rem auto 0 auto;
+    /* Updated to center the div horizontally */
+}
+
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form {
+    flex: 1;
+    padding: 40px;
+}
+
+.form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin: 15px 0 5px;
+    color: var(--hover-text-color);
+}
+
+.form input,
+.form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #6b1ad3 0%, #ca7e7e 45%);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-label {
+    color: red;
+}
+
+.section-9 {
+    text-align: center;  
+    padding: 20px;     
+    margin-top: 3rem;   
+}
+
+.contact {
+    display: flex;        
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;  
+    justify-content: center; /* Center items horizontally */
+    gap: 16px; 
+    margin-top: 1rem;           
+}
+
+.contact div {
+    display: flex;        
+    align-items: center; 
+    gap: 10px;            
+}
+
+.contact img {
+    width: 50px;          
+    height: 50px;         
+}
+/* Responsive styles */
+@media (max-width: 1029px) {
+
+    .program-highlights {
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 1rem;
+    }
+
+    .col-1 {
+        max-width: 250px;
+    }
+
+    .offer {
+        max-width: 650px;
+    }
+
+    .contact-button {
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 14px;
+    }
+
+    .section-5 .seats {
+        padding: 8px 8px;
+        background-image: var(--danger-background-color);
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 1rem;
+    }
+
+    .price-card {
+        margin: 0;
+        padding: 2px 8px;
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-top: 1rem;
+
+    }
+
+    .mentor .mentor-details {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+    }
+
+    .hero img {
+        max-height: 30px;
+    }
+
+    .offer {
+        max-width: 320px;
+    }
+
+    .contact-button {
+        padding: 2px 4px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+    .graphic-course {
+        max-width: 200px;
+    }
+
+    .headline {
+        margin: 0;
+        padding: 0;
+    }
+
+    .caption {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mentor-details {
+        max-width: 300px;
+    }
+
+    .contact-button {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .seats {
+        margin: 0;
+        padding: 0;
+        max-width: 100px;
+
+    }
+
+    .seats .spot {
+        font-size: 10px;
+    }
+
+    .section-5 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tools {
+        flex-direction: column;
+    }
+
+    .class-starts,
+    .program-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+    }
+
+    .caption {
+        font-size: 0.9rem;
+    }
+
+    .course,
+    .enroll {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .testimonial-slider {
+        width: 60%;
+        max-width: 1000px;
+        position: relative;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-bottom: 24rem;
+
+    }
+
+    .section-5 .seats {
+        margin: 0;
+        max-width: fit-content;
+  
+        margin-left: 40px;
+        margin-right: 13px;
+        margin-top: 1rem;
+    }
+
+    .price-card {
+        margin: 0;
+        padding: 2px 8px;
+        margin-top: 2rem;
+        margin-left: 16px;
+        margin-right: 16px;
+
+    }
+
+    .pricess h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-6 {
+        flex-direction: column;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .section-6 .template {
+        max-width: 250px;
+        height: 200px;
+    }
+
+    .mentor .mentor-details {
+        max-width: 300px;
+    }
+    .section-8 {
+        height: 700px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .section-8 h1{
+        font-size: 20px;
+       
+    }
+    .form{
+        flex: revert;
+        padding: 40px;
+    }
+    .formfillup{
+        margin-bottom: 1rem;
+    }
+    .strike {
+        font-size: 10px; /* Adjust as needed */
+    }
+    .contact{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    }
+    .contact img {
+        width: 20px;
+        height: 20px;
+    }
+}
+    
