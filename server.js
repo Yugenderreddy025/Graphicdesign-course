@@ -53,7 +53,7 @@ app.post("/submit", (req, res) => {
   // Write the updated workbook to file
   XLSX.writeFile(workbook, filePath);
 
-  res.json({ status: "success" });
+  res.send('Form submitted successfully!');
 });
 
 // Start the server
